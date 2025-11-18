@@ -10,8 +10,6 @@
     header { padding:80px 20px; text-align:center; }
     header h1 { font-size:2.5rem; margin-bottom:10px; }
     header p { max-width:700px; margin:0 auto 20px; }
-    .btn { display:inline-block; padding:10px 24px; border-radius:4px;
-           text-decoration:none; border:1px solid #222; }
     section { padding:40px 20px; max-width:1000px; margin:0 auto; }
     h2 { margin-bottom:10px; }
     h3 { margin-top:10px; margin-bottom:6px; }
@@ -39,7 +37,7 @@
 
 <header>
   <div class="tag">ClarityPac Media</div>
-  <h1>Wholesale AV & Marketing Goods + Transit Advertising Projects</h1>
+  <h1>Wholesale AV &amp; Marketing Goods + Transit Advertising Projects</h1>
   <p>
     We supply audio-visual and marketing products and manage end-to-end marketing
     and transit advertising projects – helping brands launch campaigns faster,
@@ -61,7 +59,7 @@
   <h2>Wholesale Products</h2>
   <div class="grid grid-3">
     <div>
-      <h3>Audio & Visual Equipment</h3>
+      <h3>Audio &amp; Visual Equipment</h3>
       <ul>
         <li>Karaoke systems (home and semi-professional)</li>
         <li>Deluxe home entertainment systems</li>
@@ -72,7 +70,7 @@
       </ul>
     </div>
     <div>
-      <h3>Marketing & Branding Goods</h3>
+      <h3>Marketing &amp; Branding Goods</h3>
       <ul>
         <li>Posters, decals and signage materials</li>
         <li>Branded POS material (basic stands, holders, etc.)</li>
@@ -93,7 +91,7 @@
 </section>
 
 <section>
-  <h2>Project Management – Marketing & Transit Advertising</h2>
+  <h2>Project Management – Marketing &amp; Transit Advertising</h2>
   <p>
     Beyond supplying goods, ClarityPac Media acts as a project partner for your marketing
     and transit advertising campaigns – from idea to execution.
@@ -159,7 +157,8 @@
               background:#e7f7ec; border:1px solid #b5e2c1; font-size:0.95rem;">
     Thank you! We’ve received your details and will be in touch soon.
   </div>
-<form id="contact-form" method="POST" action="https://formspree.io/f/mblwdgqy">
+
+  <form id="contact-form" method="POST" action="https://formspree.io/f/mblwdgqy">
     <label>
       Business Name
       <input type="text" name="business_name" required />
@@ -200,14 +199,16 @@
   const params = new URLSearchParams(window.location.search);
   if (params.get('thanks') === '1') {
     const msg = document.getElementById('thankyou-message');
-    if (msg) msg.style.display = 'block';
+    if (msg) {
+      msg.style.display = 'block';
+    }
   }
 
   // Handle form submission via AJAX, then redirect
   const form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', async function (event) {
-      event.preventDefault(); // stop browser doing normal POST + Formspree page
+      event.preventDefault(); // stop normal browser submit
 
       const formData = new FormData(form);
 
@@ -224,7 +225,7 @@
         } else {
           alert('There was an issue submitting the form. Please try again.');
         }
-      } catch (err) {
+      } catch (error) {
         alert('Network error while submitting the form. Please try again.');
       }
     });
