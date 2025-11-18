@@ -154,14 +154,13 @@
     and a practical delivery plan.
   </p>
 
-  <!--
-    IMPORTANT:
-    Replace the URL below (https://formspree.io/f/your-endpoint-id)
-    with your real form endpoint from a service like Formspree,
-    configured to send submissions to kunal.sagar@claritypacmedia.com.
-  -->
- <form method="POST" action="https://formspree.io/f/mblwdgqy">
-  <input type="hidden" name="_redirect" value="https://claritypacmedia.com" />
+  <div id="thankyou-message"
+       style="display:none; margin-bottom:15px; padding:10px; border-radius:4px;
+              background:#e7f7ec; border:1px solid #b5e2c1; font-size:0.95rem;">
+    Thank you! We’ve received your details and will be in touch soon.
+  </div>
+<form method="POST" action="https://formspree.io/f/mblwdgqy">
+  <input type="hidden" name="_redirect" value="https://claritypacmedia.com/?thanks=1" />
     <label>
       Business Name
       <input type="text" name="business_name" required />
@@ -192,4 +191,19 @@
 
 <footer>
   © <span id="year"></span> ClarityPac Media. All rights reserved.
-  <script>document.getEleme
+</footer>
+
+<script>
+  // Set current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Show thank-you message if redirected after form submit
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('thanks') === '1') {
+    const msg = document.getElementById('thankyou-message');
+    if (msg) msg.style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
