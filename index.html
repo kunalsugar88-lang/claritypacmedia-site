@@ -2,494 +2,840 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ClarityPac Media | AV & Marketing Wholesale, Transit Advertising</title>
+  <title>ClarityPac Media | Helping Fiji Businesses Grow</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="ClarityPac Media – wholesale audio visual & marketing goods, and project management for marketing and transit advertising campaigns in Fiji." />
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  
+  <meta
+    name="description"
+    content="ClarityPac Media helps Fiji businesses grow through practical marketing, revenue-focused campaigns and premium solutions like Ikarao Smart Karaoke Speakers."
+  />
   <style>
-    :root{
-      --bg: #0b1020;
-      --bg-soft: #0f1730;
-      --card: rgba(255,255,255,0.06);
-      --card-strong: rgba(255,255,255,0.10);
-      --text: #e7ecf7;
-      --muted: #a7b0c5;
-      --brand1: #7c3aed; /* purple */
-      --brand2: #06b6d4; /* cyan */
-      --brand3: #f59e0b; /* amber */
-      --brand4: #ef4444; /* red */
-      --brand5: #22c55e; /* green */
-      --radius: 18px;
-      --shadow: 0 10px 35px rgba(0,0,0,0.45);
+    :root {
+      --bg: #f5f6fa;
+      --bg-soft: #fafbff;
+      --card: #ffffff;
+      --border: #dde2ea;
+      --text-main: #22252a;
+      --text-muted: #6c737f;
+      --accent: #3949ab;   /* indigo */
+      --accent-soft: #eef0fb;
+      --accent-strong: #283593;
+      --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.08);
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:"Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1200px 600px at 10% -10%, #1a3a8a 0%, transparent 60%),
-        radial-gradient(1000px 700px at 90% -20%, #8a1a5c 0%, transparent 60%),
-        radial-gradient(900px 600px at 10% 110%, #0ea5e9 0%, transparent 60%),
-        var(--bg);
-      line-height:1.6;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:0 18px}
-
-    /* NAV */
-    nav{
-      position:sticky;top:0;z-index:50;
-      background:rgba(11,16,32,0.65);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(255,255,255,0.06);
-    }
-    .nav-inner{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:12px 0;
-    }
-    .logo{
-      display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.4px
-    }
-    .logo-mark{
-      width:34px;height:34px;border-radius:10px;
-      background:conic-gradient(from 210deg, var(--brand2), var(--brand1), var(--brand3), var(--brand2));
-      box-shadow:0 0 0 2px rgba(255,255,255,0.08) inset;
-    }
-    .nav-links{display:flex;gap:14px;font-weight:600;color:var(--muted);font-size:.95rem}
-    .nav-links a:hover{color:#fff}
-
-    /* HERO */
-    header{
-      padding:70px 0 40px;
-      position:relative;
-    }
-    .hero{
-      display:grid;gap:22px;align-items:center;
-      grid-template-columns: 1.2fr .8fr;
-    }
-    @media (max-width:900px){ .hero{grid-template-columns:1fr} }
-
-    .badge{
-      display:inline-flex;gap:8px;align-items:center;
-      padding:6px 12px;border-radius:999px;
-      background:linear-gradient(90deg, rgba(124,58,237,0.22), rgba(6,182,212,0.22));
-      border:1px solid rgba(255,255,255,0.12);
-      font-size:.85rem;color:#d7def2;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
-      width:max-content;
-    }
-    .hero h1{
-      font-size:clamp(2rem, 4vw, 3.2rem);
-      line-height:1.15;margin:8px 0 8px;font-weight:800;
-      background:linear-gradient(90deg, #ffffff, #c7d2fe, #67e8f9);
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-    }
-    .hero p{
-      color:var(--muted);font-size:1.05rem;margin:0 0 16px;
-      max-width:55ch;
-    }
-    .hero-cta{
-      display:flex;gap:10px;flex-wrap:wrap;
-    }
-    .btn{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:12px 16px;border-radius:12px;font-weight:700;
-      border:1px solid rgba(255,255,255,0.14);
-      background:var(--card-strong);color:#fff;
-      box-shadow:var(--shadow);cursor:pointer;
-      transition:transform .15s ease, background .2s ease, border .2s ease;
-    }
-    .btn:hover{transform:translateY(-2px);background:rgba(255,255,255,0.16)}
-    .btn-primary{
-      background:linear-gradient(90deg, var(--brand1), var(--brand2));
-      border:none;
-    }
-    .btn-primary:hover{filter:saturate(1.1) brightness(1.05)}
-
-    .hero-card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      border:1px solid rgba(255,255,255,0.12);
-      border-radius:22px;padding:18px;
-      box-shadow:var(--shadow);
-      display:grid;gap:12px;
-    }
-    .stat{
-      background:rgba(0,0,0,0.25);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:14px;padding:12px;
-      display:flex;align-items:center;justify-content:space-between;
-    }
-    .stat .label{color:var(--muted);font-size:.95rem}
-    .stat .value{font-weight:800}
-
-    /* SECTION */
-    section{padding:34px 0}
-    .section-title{
-      display:flex;align-items:center;justify-content:space-between;gap:10px;
-      margin-bottom:12px;
-    }
-    h2{
-      font-size:1.6rem;margin:0;font-weight:800;
-    }
-    .subtitle{color:var(--muted);margin:6px 0 0}
-
-    /* CARDS */
-    .grid{display:grid;gap:14px}
-    .grid-3{grid-template-columns:repeat(3,1fr)}
-    .grid-2{grid-template-columns:repeat(2,1fr)}
-    @media (max-width:900px){
-      .grid-3,.grid-2{grid-template-columns:1fr}
-    }
-    .card{
-      background:var(--card);
-      border:1px solid rgba(255,255,255,0.10);
-      border-radius:var(--radius);
-      padding:16px;
-      box-shadow:var(--shadow);
-      transition:transform .15s ease, border .2s ease;
-    }
-    .card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,0.18)}
-    .card h3{margin:0 0 8px;font-size:1.1rem}
-    .pill{
-      display:inline-flex;align-items:center;gap:7px;
-      font-size:.85rem;font-weight:700;color:#fff;padding:5px 9px;border-radius:999px;
-      background:rgba(255,255,255,0.12);
-    }
-    .pill.p1{background:linear-gradient(90deg, var(--brand2), #3b82f6)}
-    .pill.p2{background:linear-gradient(90deg, var(--brand3), #f97316)}
-    .pill.p3{background:linear-gradient(90deg, var(--brand1), #ec4899)}
-    .pill.p4{background:linear-gradient(90deg, var(--brand5), #10b981)}
-    ul{margin:10px 0 0;padding-left:18px}
-    li{margin:6px 0;color:#eaf0ff}
-
-    /* FEATURE STRIP */
-    .strip{
-      background:linear-gradient(90deg, rgba(124,58,237,0.25), rgba(6,182,212,0.20), rgba(245,158,11,0.20));
-      border:1px solid rgba(255,255,255,0.12);
-      border-radius:20px;padding:14px 16px;
-      display:grid;gap:10px;
-    }
-    .strip strong{color:#fff}
-
-    /* CONTACT FORM */
-    .contact-wrap{
-      background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      border:1px solid rgba(255,255,255,0.12);
-      border-radius:22px;padding:18px;
-      box-shadow:var(--shadow);
-    }
-    form{display:grid;gap:10px;margin-top:10px}
-    label{display:grid;gap:6px;font-size:.9rem;color:#d7def2;font-weight:600}
-    input, textarea{
-      width:100%;padding:10px 11px;border-radius:12px;
-      background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.14);
-      color:#fff;font:inherit;outline:none;
-      transition:border .2s ease, box-shadow .2s ease;
-    }
-    input:focus, textarea:focus{
-      border-color:rgba(6,182,212,0.8);
-      box-shadow:0 0 0 3px rgba(6,182,212,0.18);
-    }
-    textarea{min-height:110px;resize:vertical}
-
-    .form-grid{
-      display:grid;gap:10px;grid-template-columns:repeat(2,1fr);
-    }
-    @media (max-width:700px){ .form-grid{grid-template-columns:1fr} }
-
-    .btn-submit{
-      justify-content:center;
-      padding:12px 16px;border-radius:12px;font-weight:800;
-      background:linear-gradient(90deg, var(--brand1), var(--brand2));
-      border:none;color:#fff;cursor:pointer;
-      box-shadow:var(--shadow);
-    }
-    .btn-submit:hover{filter:saturate(1.1) brightness(1.05)}
-
-    #thankyou-message{
-      display:none;margin-bottom:12px;padding:12px;border-radius:12px;
-      background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.5);
-      font-weight:600;color:#d9ffe7;
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
     }
 
-    footer{
-      padding:22px 0;color:var(--muted);font-size:.9rem;text-align:center;
-      border-top:1px solid rgba(255,255,255,0.08);
-      margin-top:12px;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    /* subtle fade-in */
-    .fade{animation:fadeUp .6s ease both}
-    .delay1{animation-delay:.05s}
-    .delay2{animation-delay:.12s}
-    .delay3{animation-delay:.18s}
-    @keyframes fadeUp{ from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background-color: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .brand-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+    }
+
+    .brand-tagline {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent-strong);
+    }
+
+    .nav-cta {
+      font-size: 0.85rem;
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: var(--accent-strong);
+    }
+
+    .nav-cta:hover {
+      background-color: var(--accent);
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 2.5rem 0 3rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(to bottom, #ffffff, var(--bg));
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.3rem;
+      line-height: 1.25;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero h1 span {
+      color: var(--accent-strong);
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      color: var(--text-main);
+      margin-bottom: 1.3rem;
+    }
+
+    .hero-sub strong {
+      font-weight: 600;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.6rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-strong);
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.7rem 1.4rem;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--accent-strong);
+      border-radius: 999px;
+      padding: 0.7rem 1.4rem;
+      border: 1px solid var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--accent-soft);
+    }
+
+    .hero-card {
+      background-color: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 1.3rem 1.3rem 1.4rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-card-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-strong);
+    }
+
+    .hero-card p {
+      font-size: 0.87rem;
+      color: var(--text-main);
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-list {
+      font-size: 0.86rem;
+      color: var(--text-main);
+      margin-left: 1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-tagline {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Sections */
+    section {
+      padding: 2.5rem 0;
+    }
+
+    .section-header {
+      margin-bottom: 1.4rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .section-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .columns-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+
+    .card {
+      background-color: var(--card);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 1.1rem 1.15rem 1.2rem;
+    }
+
+    .card-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: var(--accent-strong);
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.45rem;
+      color: var(--text-main);
+    }
+
+    .card ul {
+      font-size: 0.86rem;
+      color: var(--text-main);
+      margin-left: 1rem;
+    }
+
+    .card ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    .strip {
+      background-color: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.8rem;
+    }
+
+    .list-title {
+      font-weight: 600;
+      color: var(--accent-strong);
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+    }
+
+    .simple-list {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-left: 1rem;
+    }
+
+    .simple-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .value-list {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-left: 1rem;
+    }
+
+    .value-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    .value-list strong {
+      color: var(--accent-strong);
+    }
+
+    .contact-box {
+      background-color: var(--card);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 1.4rem 1.5rem;
+    }
+
+    .contact-box p {
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+      color: var(--text-main);
+    }
+
+    .contact-actions {
+      margin-top: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    /* Thank-you message */
+    #thankyou-message {
+      display: none;
+      font-size: 0.85rem;
+      color: var(--accent-strong);
+      background-color: #e3f2fd;
+      border-radius: 8px;
+      padding: 0.6rem 0.75rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem 1rem;
+    }
+
+    .contact-form .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-field label {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      padding: 0.55rem 0.6rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+      font-family: inherit;
+      color: var(--text-main);
+      background-color: #fff;
+    }
+
+    .form-field textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(57, 73, 171, 0.12);
+    }
+
+    .form-helper {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .form-submit {
+      margin-top: 0.4rem;
+    }
+
+    .form-submit button {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1rem 0;
+      background-color: #ffffff;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-card {
+        margin-top: 0.5rem;
+      }
+      .columns-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .two-columns {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      nav ul {
+        display: none;
+      }
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-
-<nav>
-  <div class="container nav-inner">
-    <div class="logo">
-      <div class="logo-mark"></div>
-      <div>ClarityPac Media</div>
-    </div>
-    <div class="nav-links">
-      <a href="#wholesale">Wholesale</a>
-      <a href="#projects">Projects</a>
-      <a href="#why">Why Us</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<header>
-  <div class="container hero">
-    <div class="fade">
-      <div class="badge">Wholesale • AV • Marketing • Transit Ads</div>
-      <h1>Wholesale AV & Marketing Goods + Transit Advertising Projects</h1>
-      <p>
-        We supply audio-visual and marketing products and manage end-to-end marketing
-        and transit advertising projects — helping brands launch campaigns faster,
-        cleaner and with less hassle.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#contact">Get a Quote / Enquire</a>
-        <a class="btn" href="#wholesale">View Products</a>
+  <header>
+    <div class="container nav">
+      <div class="brand-block">
+        <div class="brand-name">ClarityPac Media</div>
+        <div class="brand-tagline">Helping Fiji Businesses Grow</div>
       </div>
+      <nav>
+        <ul>
+          <li><a href="#what-we-do">What We Do</a></li>
+          <li><a href="#ikarao">Ikarao</a></li>
+          <li><a href="#who-we-work-with">Who We Work With</a></li>
+          <li><a href="#why">Why ClarityPac</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="nav-cta">Let’s Talk</a>
     </div>
+  </header>
 
-    <div class="hero-card fade delay2">
-      <div class="stat">
-        <div class="label">Focus</div>
-        <div class="value">Wholesale + Delivery</div>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="hero-kicker">Fiji • Marketing • Revenue • Growth</div>
+          <h1>Helping Fiji businesses <span>grow</span>.</h1>
+          <p class="hero-sub">
+            ClarityPac Media is a Fiji-based growth and marketing partner. We help businesses and retailers
+            <strong>generate more revenue, attract more customers and build stronger brands</strong> –
+            using practical campaigns and premium solutions like Ikarao Smart Karaoke Speakers.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#contact" class="btn-primary">Let’s Talk Growth</a>
+            <a href="#ikarao" class="btn-secondary">View Ikarao Offer</a>
+          </div>
+
+          <div class="hero-note">
+            Clear ideas, simple execution, real-world impact for Fiji businesses.
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-label">CLARITYPAC SNAPSHOT</div>
+          <h2>Growth partner, not just a product supplier.</h2>
+          <p>
+            We start with your business goals, then design marketing avenues, promotions and premium experiences that help you sell more.
+          </p>
+          <ul class="hero-list">
+            <li>Revenue &amp; growth planning sessions</li>
+            <li>Campaign and offer ideas built around your market</li>
+            <li>Premium solutions like Ikarao Smart Karaoke Speakers</li>
+          </ul>
+          <div class="hero-tagline">
+            “Clarity, credibility and growth – that’s what we stand for.”
+          </div>
+        </aside>
       </div>
-      <div class="stat">
-        <div class="label">Coverage</div>
-        <div class="value">Fiji & Pacific</div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section id="what-we-do">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What We Do</h2>
+          <p class="section-sub">
+            We start with your business goals and design practical marketing avenues and solutions that help you sell more.
+          </p>
+        </div>
+
+        <div class="columns-3">
+          <div class="card">
+            <div class="card-label">Revenue &amp; Growth Planning</div>
+            <h3>1) Revenue &amp; Growth Planning</h3>
+            <p>
+              We work with business owners, marketing teams and retail managers to translate growth targets into clear plans and campaigns.
+            </p>
+            <ul>
+              <li>Discovery sessions to understand customers and sales targets</li>
+              <li>Quick-win revenue ideas (festive offers, bundles, events)</li>
+              <li>Promo calendars aligned to paydays and key seasons</li>
+              <li>Advice on channel mix (in-store, digital, events, sponsorships)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Marketing &amp; Brand Activation</div>
+            <h3>2) Marketing &amp; Brand Activation</h3>
+            <p>
+              We support clients with marketing activities that drive awareness and sales – so customers can easily find, understand and choose your offers.
+            </p>
+            <ul>
+              <li>Product launch and promotion planning</li>
+              <li>Campaign messaging and offer positioning</li>
+              <li>Digital &amp; social campaign ideas and content angles</li>
+              <li>Promotional mechanics – bundles, giveaways, loyalty and referrals</li>
+              <li>Basic performance tracking and “what to do next” suggestions</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Premium Solutions &amp; Products</div>
+            <h3>3) Premium Solutions &amp; Products</h3>
+            <p>
+              We bring in premium, high-demand products that can unlock new revenue streams and help you stand out from competitors.
+            </p>
+            <ul>
+              <li>Evaluate products successful in Asia, Australia &amp; NZ</li>
+              <li>Position them for the Fiji market and your customers</li>
+              <li>Support with pricing, positioning and simple sales training</li>
+              <li>Co-create campaigns around new product introductions</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="stat">
-        <div class="label">Projects</div>
-        <div class="value">Marketing + Transit Ads</div>
+    </section>
+
+    <!-- IKARAO -->
+    <section id="ikarao" class="strip">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Flagship Solution: Ikarao Smart Karaoke Speakers</h2>
+          <p class="section-sub">
+            Premium all-in-one karaoke with built-in lyric screens and wireless microphones – now arriving in Fiji.
+            Perfect for venues, events, retailers and families looking for a high-value experience.
+          </p>
+        </div>
+
+        <div class="two-columns">
+          <div>
+            <p style="font-size:0.9rem; margin-bottom:0.7rem;">
+              Ikarao Smart Karaoke Speakers combine powerful audio, smart connectivity and intuitive interfaces.
+              Each unit includes:
+            </p>
+            <ul class="simple-list">
+              <li>Built-in lyrics touchscreen</li>
+              <li>2× wireless microphones</li>
+              <li>Smart connectivity for YouTube and karaoke apps</li>
+              <li>Fiji-based 12-month warranty support</li>
+            </ul>
+            <p style="font-size:0.88rem; margin-top:0.7rem;">
+              ClarityPac Media acts as your trusted karaoke partner – helping you use Ikarao to draw crowds,
+              run events and unlock new revenue streams.
+            </p>
+          </div>
+          <div>
+            <p class="list-title">Ideal for:</p>
+            <ul class="simple-list">
+              <li>Hotels, resorts, bars and restaurants</li>
+              <li>Event companies and party planners</li>
+              <li>Electronics and lifestyle retailers</li>
+              <li>Corporate and family entertainment</li>
+            </ul>
+            <div style="margin-top:1rem;">
+              <a href="ClarityPac_Ikarao_Christmas_Catalog.pdf" class="btn-secondary">
+                View Ikarao Catalog (PDF)
+              </a>
+            </div>
+            <p style="font-size:0.78rem; color:var(--text-muted); margin-top:0.4rem;">
+              (Upload your catalog PDF to the site root with this file name, or update the link above.)
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="stat">
-        <div class="label">Approach</div>
-        <div class="value">Fast • Practical • Reliable</div>
+    </section>
+
+    <!-- WHO WE WORK WITH -->
+    <section id="who-we-work-with">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Who We Work With</h2>
+          <p class="section-sub">
+            ClarityPac Media partners with organisations across Fiji that want to grow smarter, not just louder.
+          </p>
+        </div>
+
+        <div class="two-columns">
+          <div>
+            <div class="list-title">B2B Clients &amp; Partners</div>
+            <ul class="simple-list">
+              <li>Retail chains, electronics stores and supermarkets</li>
+              <li>Hotels, resorts, bars, restaurants and entertainment venues</li>
+              <li>Corporate organisations running events or staff/customer programmes</li>
+              <li>Distributors and resellers seeking fast-moving premium categories</li>
+            </ul>
+          </div>
+          <div>
+            <div class="list-title">Retail &amp; Wholesale Outlets</div>
+            <ul class="simple-list">
+              <li>Electronics and appliance retailers</li>
+              <li>Lifestyle and entertainment stores</li>
+              <li>Event suppliers and hospitality outlets</li>
+              <li>Regional resellers across Fiji</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</header>
+    </section>
 
-<section class="container fade delay1">
-  <div class="strip">
-    <div><strong>ClarityPac Media</strong> brings together <strong>product supply</strong> and <strong>project management</strong> under one roof.</div>
-    <div>We help agencies, brands and businesses source the right AV and marketing goods — then deliver campaigns on buses, in-store and across physical touchpoints.</div>
-  </div>
-</section>
-
-<section id="wholesale" class="container fade delay2">
-  <div class="section-title">
-    <h2>Wholesale Products</h2>
-  </div>
-  <p class="subtitle">Reliable supply for retail, events, activations, corporate and home use.</p>
-
-  <div class="grid grid-3" style="margin-top:12px;">
-    <div class="card">
-      <div class="pill p1">Audio & Visual Equipment</div>
-      <h3 style="margin-top:8px;">Entertainment & AV</h3>
-      <ul>
-        <li><strong>Karaoke systems</strong> (home & semi-professional)</li>
-        <li><strong>Deluxe home entertainment systems</strong></li>
-        <li>Speakers, amplifiers & microphones</li>
-        <li>Portable and fixed PA systems</li>
-        <li>Display screens & AV accessories</li>
-        <li>Solutions for events, retail & activations</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="pill p2">Marketing & Branding Goods</div>
-      <h3 style="margin-top:8px;">Campaign Materials</h3>
-      <ul>
-        <li>Posters, decals & signage materials</li>
-        <li>Branded POS essentials (stands, holders)</li>
-        <li>Simple promotional items for campaigns</li>
-        <li>Support for in-store, outdoor & events</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="pill p3">Transit Advertising Materials</div>
-      <h3 style="margin-top:8px;">On-Bus Branding</h3>
-      <ul>
-        <li>Bus wrap & panel material (vinyl, stickers)</li>
-        <li>In-bus posters & seat-back branding</li>
-        <li>QR-enabled creatives for offers & surveys</li>
-        <li>Coordination with print & installation partners</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="container fade delay2">
-  <div class="section-title">
-    <h2>Project Management – Marketing & Transit Advertising</h2>
-  </div>
-  <p class="subtitle">From idea to execution, with full delivery coordination.</p>
-
-  <div class="grid grid-3" style="margin-top:12px;">
-    <div class="card">
-      <div class="pill p4">Plan</div>
-      <h3>Campaign & Route Planning</h3>
-      <ul>
-        <li>Define objectives & target audience</li>
-        <li>Select bus routes, locations & timelines</li>
-        <li>Align AV & marketing materials to goals</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div class="pill p1">Deliver</div>
-      <h3>Execution & Coordination</h3>
-      <ul>
-        <li>Coordinate suppliers, operators & installers</li>
-        <li>Schedule installs & removals</li>
-        <li>Manage delivery timelines & QC</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div class="pill p2">Review</div>
-      <h3>Support & Reporting</h3>
-      <ul>
-        <li>Post-campaign photos & updates</li>
-        <li>QR scan summaries (where applicable)</li>
-        <li>Recommendations for follow-ups</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="container fade delay3">
-  <div class="grid grid-2">
-    <div class="card">
-      <h3>Who We Work With</h3>
-      <ul>
-        <li>Marketing & creative agencies</li>
-        <li>FMCG, retail & consumer brands</li>
-        <li>Telcos, banks & service providers</li>
-        <li>Government, NGOs & development projects</li>
-        <li>Bus operators & transport partners</li>
-      </ul>
-    </div>
-    <div id="why" class="card">
-      <h3>Why Partner With ClarityPac Media?</h3>
-      <ul>
-        <li>Single point of contact for products + delivery</li>
-        <li>Experience across AV, marketing & transit ads</li>
-        <li>Strong vendor/operator relationships in Fiji</li>
-        <li>Practical, execution-focused approach</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="container fade delay2">
-  <div class="section-title">
-    <h2>Contact Us for More Details</h2>
-  </div>
-  <p class="subtitle">
-    Leave your details below and we’ll get back with options and a practical delivery plan.
-  </p>
-
-  <div class="contact-wrap" style="margin-top:10px;">
-    <div id="thankyou-message">
-      Thank you! We’ve received your details and will be in touch soon.
-    </div>
-
-    <form id="contact-form" method="POST" action="https://formspree.io/f/mblwdgqy">
-      <div class="form-grid">
-        <label>
-          Business Name
-          <input type="text" name="business_name" required />
-        </label>
-        <label>
-          Name
-          <input type="text" name="contact_name" required />
-        </label>
+    <!-- WHY CLARITYPAC -->
+    <section id="why">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Why Businesses Choose ClarityPac Media</h2>
+        </div>
+        <ul class="value-list">
+          <li>
+            <strong>Business-needs-first approach</strong> – we start with your revenue and brand goals, then recommend the right marketing avenues and solutions.
+          </li>
+          <li>
+            <strong>Support beyond supply</strong> – not just products, but campaigns, positioning and activation support so solutions actually move.
+          </li>
+          <li>
+            <strong>Premium products with clear use cases</strong> – solutions that create experiences, draw crowds and increase spend.
+          </li>
+          <li>
+            <strong>Local trust &amp; support</strong> – Fiji-based coordination for warranty, after-sales and partner support.
+          </li>
+          <li>
+            <strong>Simple, practical ideas</strong> – easy-to-implement actions that work in the real Pacific market context.
+          </li>
+          <li>
+            <strong>Long-term partnership</strong> – we grow alongside your business, not just handle one-off transactions.
+          </li>
+        </ul>
       </div>
+    </section>
 
-      <div class="form-grid">
-        <label>
-          Email
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          Phone
-          <input type="tel" name="phone" />
-        </label>
+    <!-- CONTACT -->
+    <section id="contact" class="strip">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Let’s Talk About Your Next Growth Move</h2>
+          <p class="section-sub">
+            Whether you’re planning a festive campaign, launching a new product, or looking for ways to increase revenue
+            from your existing customers, we’d love to help.
+          </p>
+        </div>
+
+        <div class="contact-box">
+          <p><strong>ClarityPac Media</strong></p>
+          <p>Davuilevu, Nakasi, Fiji Islands</p>
+          <p>Phone/WhatsApp/Viber: <strong>(679) 973 2715</strong></p>
+          <p>
+            To get in touch, please use the <strong>Contact Us form</strong> below or reach out via WhatsApp.
+          </p>
+
+          <!-- Thanks message (shown after redirect ?thanks=1) -->
+          <div id="thankyou-message">
+            Thank you! We’ve received your details and will be in touch soon.
+          </div>
+
+          <!-- CONTACT FORM (Formspree, AJAX) -->
+          <form
+            id="contact-form"
+            class="contact-form"
+            method="POST"
+            action="https://formspree.io/f/mblwdgqy"
+          >
+            <input type="hidden" name="_subject" value="New enquiry from ClarityPac Media website" />
+
+            <div class="form-field">
+              <label for="business_name">Business / Organisation</label>
+              <input type="text" id="business_name" name="business_name" />
+            </div>
+
+            <div class="form-field">
+              <label for="contact_name">Your Name*</label>
+              <input type="text" id="contact_name" name="contact_name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone / WhatsApp*</label>
+              <input type="text" id="phone" name="phone" required />
+              <div class="form-helper">Include country code if outside Fiji.</div>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email (optional)</label>
+              <input type="email" id="email" name="email" />
+            </div>
+
+            <div class="form-field full-width">
+              <label for="message">How can we help?*</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="form-field full-width form-submit">
+              <button type="submit" class="btn-primary">
+                Send Message
+              </button>
+              <div class="form-helper">
+                This form is powered by Formspree and will be delivered to our configured email inbox.
+              </div>
+            </div>
+          </form>
+
+          <div class="contact-actions">
+            <a
+              href="https://wa.me/6799732715"
+              class="btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              Message on WhatsApp
+            </a>
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
 
-      <label>
-        Location
-        <input type="text" name="location" />
-      </label>
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> ClarityPac Media. All rights reserved.</div>
+      <div>Marketing, revenue &amp; premium solutions for Fiji businesses.</div>
+    </div>
 
-      <label>
-        Brief Details of Your Requirement
-        <textarea name="message" placeholder="Products needed, timelines, campaign idea..."></textarea>
-      </label>
+    <script>
+      // Set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-      <button class="btn-submit" type="submit">Submit Enquiry</button>
-    </form>
-  </div>
-</section>
-
-<footer>
-  © <span id="year"></span> ClarityPac Media. All rights reserved.
-</footer>
-
-<script>
-  // Set current year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Show thank-you message if redirected after form submit
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('thanks') === '1') {
-    const msg = document.getElementById('thankyou-message');
-    if (msg) msg.style.display = 'block';
-  }
-
-  // AJAX submit to Formspree, then redirect back to your site
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', async function (event) {
-      event.preventDefault();
-
-      const formData = new FormData(form);
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          window.location.href = 'https://claritypacmedia.com/?thanks=1';
-        } else {
-          alert('There was an issue submitting the form. Please try again.');
-        }
-      } catch (error) {
-        alert('Network error while submitting the form. Please try again.');
+      // Show thank-you message if redirected with ?thanks=1
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('thanks') === '1') {
+        const msg = document.getElementById('thankyou-message');
+        if (msg) msg.style.display = 'block';
       }
-    });
-  }
-</script>
 
+      // AJAX submit to Formspree, then redirect back to your site
+      const form = document.getElementById('contact-form');
+      if (form) {
+        form.addEventListener('submit', async function (event) {
+          event.preventDefault();
+
+          const formData = new FormData(form);
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+              // redirect back to main site with thank-you flag
+              window.location.href = 'https://claritypacmedia.com/?thanks=1';
+            } else {
+              alert('Something went wrong while sending your message. Please try again.');
+            }
+          } catch (error) {
+            alert('Network error while sending your message. Please try again.');
+          }
+        });
+      }
+    </script>
+  </footer>
 </body>
 </html>
