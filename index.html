@@ -831,6 +831,14 @@
           }
         });
       }
+            // Click logo -> scroll to top
+      const brandTop = document.getElementById('brand-top');
+      if (brandTop) {
+        brandTop.style.cursor = 'pointer';
+        brandTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
     </script>
   </footer>
 </body>
