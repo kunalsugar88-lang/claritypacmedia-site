@@ -60,6 +60,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1.5rem;
       padding: 0.75rem 0;
     }
 
@@ -81,23 +82,42 @@
       color: var(--text-muted);
     }
 
-    nav ul {
+    /* Mobile menu button (hidden on desktop) */
+    .nav-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      font-size: 1.4rem;
+      cursor: pointer;
+      padding: 0.25rem 0.4rem;
+      line-height: 1;
+    }
+
+    /* Main navigation container */
+    #main-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    /* Nav links list */
+    #main-nav ul {
       list-style: none;
       display: flex;
       gap: 1.5rem;
       font-size: 0.9rem;
     }
 
-    nav a {
+    #main-nav a {
       color: var(--text-main);
       font-weight: 500;
     }
 
-    nav a:hover {
+    #main-nav a:hover {
       color: var(--accent-strong);
     }
 
-    .nav-cta {
+    .nav-cta-inline {
       font-size: 0.85rem;
       padding: 0.45rem 0.95rem;
       border-radius: 999px;
@@ -105,7 +125,7 @@
       color: var(--accent-strong);
     }
 
-    .nav-cta:hover {
+    .nav-cta-inline:hover {
       background-color: var(--accent);
       color: #fff;
     }
@@ -459,26 +479,73 @@
     }
 
     /* Responsive */
-    @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-card {
-        margin-top: 0.5rem;
-      }
-      .columns-3 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .two-columns {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      nav ul {
-        display: none;
-      }
-      .contact-form {
-        grid-template-columns: 1fr;
-      }
-    }
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-card {
+    margin-top: 0.5rem;
+  }
+
+  .columns-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .two-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  /* Header / nav on mobile */
+  .nav {
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+
+  #main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.6rem 1.25rem 0.9rem;
+    z-index: 10;
+  }
+
+  #main-nav.open {
+    display: flex;
+  }
+
+  #main-nav ul {
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+  }
+
+  #main-nav ul li a {
+    display: block;
+    padding: 0.35rem 0;
+  }
+
+  .nav-cta-inline {
+    margin-top: 0.4rem;
+  }
+}
   </style>
 </head>
 <body id="top">
@@ -488,15 +555,22 @@
       <div class="brand-name">ClarityPac Media</div>
       <div class="brand-tagline">Helping Fiji Businesses Grow</div>
     </div>
-    <nav>
+
+    <!-- Mobile menu button -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <!-- Main navigation -->
+    <nav id="main-nav">
       <ul>
         <li><a href="#what-we-do">What We Do</a></li>
         <li><a href="#ikarao">Ikarao</a></li>
         <li><a href="#who-we-work-with">Who We Work With</a></li>
         <li><a href="#why">Why ClarityPac</a></li>
       </ul>
+      <a href="#contact" class="nav-cta nav-cta-inline">Let’s Talk</a>
     </nav>
-    <a href="#contact" class="nav-cta">Let’s Talk</a>
   </div>
 </header>
 
@@ -795,7 +869,7 @@
       <div>Marketing, revenue &amp; premium solutions for Fiji businesses.</div>
     </div>
 
-    <script>
+      <script>
       // Set current year
       document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -831,12 +905,31 @@
           }
         });
       }
-            // Click logo -> scroll to top
+
+      // Click logo -> scroll to top
       const brandTop = document.getElementById('brand-top');
       if (brandTop) {
         brandTop.style.cursor = 'pointer';
         brandTop.addEventListener('click', () => {
           window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Mobile nav toggle
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.getElementById('main-nav');
+
+      if (navToggle && mainNav) {
+        // Open / close menu when hamburger is clicked
+        navToggle.addEventListener('click', () => {
+          mainNav.classList.toggle('open');
+        });
+
+        // Close menu after clicking any link
+        mainNav.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mainNav.classList.remove('open');
+          });
         });
       }
     </script>
